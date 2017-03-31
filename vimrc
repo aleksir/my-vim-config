@@ -31,6 +31,8 @@ set showmatch
 
 "set backspace=indent,eol,startr
 
+let mapleader = ','
+
 set expandtab
 
 " vundle
@@ -54,6 +56,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-fireplace'
 Plugin 'groenewege/vim-less'
 Plugin 'tpope/vim-rails'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 
 " All of your Plugins must be added before the following line
@@ -110,6 +113,8 @@ vnoremap <LEADER>. :<C-U>call SearchTagsWithSelection()<CR>
 nmap <F7> :NERDTreeToggle<CR>
 
 " ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_map = '<C-P>'
 let g:ctrlp_cmd = 'CtrlP pwd'
