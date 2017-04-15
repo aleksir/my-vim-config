@@ -55,6 +55,7 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'groenewege/vim-less'
 Plugin 'tpope/vim-rails'
 Plugin 'mxw/vim-jsx'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 
 " All of your Plugins must be added before the following line
