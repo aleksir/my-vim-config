@@ -20,8 +20,9 @@ if [ -e $HOME/.gvimrc ]; then mv $HOME/.gvimrc{,_bak}; fi
 ln -sf vimrc $HOME/.vimrc
 ln -sf gvimrc $HOME/.gvimrc
 
-if [ ! -e $HOME/.vim/bundle/Vundle.vim ]; then
-    git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+if [ ! -e $HOME/.vim/autoload/plug.vim ]; then
+    curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
-vim +VundleInstall +qall
+vim +PlugInstall

@@ -39,29 +39,23 @@ set expandtab
 filetype off " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'lukerandall/haskellmode-vim'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-scripts/paredit.vim'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-classpath'
+Plug 'guns/vim-clojure-static'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-fireplace'
+Plug 'groenewege/vim-less'
+Plug 'tpope/vim-rails'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'mxw/vim-jsx'
 
-Plugin 'lukerandall/haskellmode-vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-scripts/paredit.vim'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-classpath'
-Plugin 'guns/vim-clojure-static'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-fireplace'
-Plugin 'groenewege/vim-less'
-Plugin 'tpope/vim-rails'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'mxw/vim-jsx'
-
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()
 
 filetype plugin on
 

@@ -1,3 +1,5 @@
 bundle/
+autoload/
+plugged/
 *.swp
 .DS_Store
