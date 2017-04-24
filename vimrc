@@ -54,6 +54,7 @@ Plug 'groenewege/vim-less'
 Plug 'tpope/vim-rails'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mxw/vim-jsx'
+Plug 'junegunn/vim-easy-align'
 
 call plug#end()
 
