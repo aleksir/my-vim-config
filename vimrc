@@ -64,6 +64,9 @@ filetype plugin on
 au BufEnter *.hs compiler ghc
 let g:ghc = "/usr/bin/ghc"
 let g:haddock_docdir = "/usr/share/doc/ghc/html/" 
+" Configure browser for haskell_doc.vim
+let g:haddock_browser = "open"
+let g:haddock_browser_callformat = "%s %s"
 
 " set colors when using iTerm2
 set t_Co=256
