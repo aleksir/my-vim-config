@@ -56,7 +56,13 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mxw/vim-jsx'
 Plug 'junegunn/vim-easy-align'
 Plug 'mileszs/ack.vim'
+
+" Elixir
 Plug 'elixir-editors/vim-elixir'
+Plug 'slashmili/alchemist.vim'
+
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
