@@ -55,6 +55,14 @@ Plug 'tpope/vim-rails'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mxw/vim-jsx'
 Plug 'junegunn/vim-easy-align'
+Plug 'mileszs/ack.vim'
+
+" Elixir
+Plug 'elixir-editors/vim-elixir'
+Plug 'slashmili/alchemist.vim'
+
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
@@ -97,16 +105,20 @@ function! s:get_visual_selection()
     return join(lines, "\n")
 endfunction
 
-function SearchAgWithSelection()
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+function SearchAckWithSelection()
     let sel = s:get_visual_selection()
-    execute "Ag '" . sel . "'"
+    execute "Ack '" . sel . "'"
 endfunction
 function SearchTagsWithSelection()
     let sel = s:get_visual_selection()
     execute "CtrlPTag '" . sel . "'"
 endfunction
 
-vnoremap <LEADER>a :<C-U>call SearchAgWithSelection()<CR>
+vnoremap <LEADER>a :<C-U>call SearchAckWithSelection()<CR>
 vnoremap <LEADER>. :<C-U>call SearchTagsWithSelection()<CR>
 
 nmap <F7> :NERDTreeToggle<CR>
