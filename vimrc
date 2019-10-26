@@ -56,6 +56,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mxw/vim-jsx'
 Plug 'junegunn/vim-easy-align'
 Plug 'mileszs/ack.vim'
+Plug 'editorconfig/editorconfig-vim'
 
 " Elixir
 Plug 'elixir-editors/vim-elixir'
@@ -63,6 +64,22 @@ Plug 'slashmili/alchemist.vim'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" Typescript
+Plug 'HerringtonDarkholme/yats.vim'
+
+if has('nvim')
+    Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+endif
+
+" For async completion
+Plug 'Shougo/deoplete.nvim'
+" For Denite features
+Plug 'Shougo/denite.nvim'
+
+" Enable deoplete at startup
+
+  let g:deoplete#enable_at_startup = 1
 
 call plug#end()
 
